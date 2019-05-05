@@ -133,7 +133,7 @@ export default class HomePage extends React.PureComponent { // eslint-disable-li
   }
 
   onDelete = (key) => {
-    console.log('删除的key为', key);
+    // console.log('删除的key为', key);
     const d = [...this.state.dataSource];
     this.setState({
       dataSource: d.filter((item) => item.key !== key),
@@ -160,8 +160,8 @@ export default class HomePage extends React.PureComponent { // eslint-disable-li
     this.setState({ selectedRowKeys: [] });
   };
 
-  onChangeSelected = (selectedRowKeys, selectedRows) => {
-    console.log(`selectedRowKeys: ${selectedRowKeys}`, 'selectedRows: ', selectedRows);
+  onChangeSelected = (selectedRowKeys) => {
+    // console.log(`selectedRowKeys: ${selectedRowKeys}`, 'selectedRows: ', selectedRows);
     const buttonPower = selectedRowKeys.length === 0;
     this.setState({ selectedRowKeys, buttonPower });
   };

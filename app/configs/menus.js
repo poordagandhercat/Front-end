@@ -6,6 +6,6 @@ export const routes = [
   {
     key: '/',
     name: 'HomePage',
-    loader: () => import('laity/HomePage')
-  }
+    loader: () => import('laity/HomePage'),
+  },
 ];

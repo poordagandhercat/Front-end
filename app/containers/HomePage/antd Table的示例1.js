@@ -29,6 +29,7 @@ export default class HomePage extends React.PureComponent { // eslint-disable-li
       title: 'operation',
       dataIndex: 'operation',
       render: (text, record) => (
+        // eslint-disable-next-line jsx-a11y/no-static-element-interactions
         <a onClick={() => this.onDelete(record.key)}>Delete</a>
       ),
       width: '25%',
@@ -58,7 +59,7 @@ export default class HomePage extends React.PureComponent { // eslint-disable-li
   }
 
   onDelete = (key) => {
-    console.log(key);
+    // console.log(key);
     const d = [...this.state.dataSource];
     this.setState({
       dataSource: d.filter((item) => item.key !== key),
@@ -85,8 +86,8 @@ export default class HomePage extends React.PureComponent { // eslint-disable-li
     this.setState({ selectedRowKeys: [] });
   };
 
-  onChangeSelected = (selectedRowKeys, selectedRows) => {
-    console.log(`selectedRowKeys: ${selectedRowKeys}`, 'selectedRows: ', selectedRows);
+  onChangeSelected = (selectedRowKeys) => {
+    // console.log(`selectedRowKeys: ${selectedRowKeys}`, 'selectedRows: ', selectedRows);
     const buttonPower = selectedRowKeys.length === 0;
     this.setState({ selectedRowKeys, buttonPower });
   };

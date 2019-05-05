@@ -2,12 +2,11 @@ import React from 'react';
 import { Menu, Icon, Layout } from 'antd';
 
 const SubMenu = Menu.SubMenu;
-const MenuItemGroup = Menu.ItemGroup;
 
 const { Sider } = Layout;
 export default class LeftMenu extends React.Component {
-  handleClick = (e) => {
-    console.log('click ', e);
+  handleClick = () => {
+    // console.log('click ', e);
   }
 
   render() {
@@ -16,8 +15,8 @@ export default class LeftMenu extends React.Component {
         style={{ overflow: 'auto', height: '100vh', position: 'fixed', left: 0 }}
         breakpoint="lg"
         collapsedWidth="0"
-        onBreakpoint={(broken) => { console.log(broken); }}
-        onCollapse={(collapsed, type) => { console.log(collapsed, type); }}
+        onBreakpoint={() => {}}
+        onCollapse={() => {}}
       >
         <div style={{ height: '32px', background: 'rgba(255,255,255,.2)', margin: '16px' }} ><span style={{ color: '#fff', lineHeight: '32px' }}>LOGO</span></div>
         <Menu theme="dark" mode="inline" defaultSelectedKeys={['1']}>

@@ -14,13 +14,13 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
-import { Layout, Menu, Icon, Breadcrumb } from 'antd';
-
-import LeftMenu from './leftMenu';
+import { Layout, Breadcrumb } from 'antd';
 
 import HomePage from 'containers/HomePage/Loadable';
 import GithubPage from 'containers/GithubPage/Loadable';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
+
+import LeftMenu from './leftMenu';
 
 const { Header, Content, Footer } = Layout;
 export default function App() {

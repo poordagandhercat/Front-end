@@ -10,10 +10,10 @@ export default class ListIpt extends React.PureComponent { // eslint-disable-lin
     };
   }
 
-  render () {
-    const {  } = this.state
+  render() {
+    // const {  } = this.state;
     return (
       <Input />
-    )
+    );
   }
 }

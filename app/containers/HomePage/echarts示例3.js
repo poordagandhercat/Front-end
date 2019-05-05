@@ -21,26 +21,26 @@ export default class HomePage extends React.PureComponent { // eslint-disable-li
 
   toSee = () => {
     echarts.init(document.getElementById('main')).setOption({
-    title: {text: 'Line Chart'},
-    tooltip: {},
-    toolbox: {
+      title: { text: 'Line Chart' },
+      tooltip: {},
+      toolbox: {
         feature: {
-            dataView: {},
-            saveAsImage: {
-                pixelRatio: 2
-            },
-            restore: {}
-        }
-    },
-    xAxis: {},
-    yAxis: {},
-    series: [{
+          dataView: {},
+          saveAsImage: {
+            pixelRatio: 2,
+          },
+          restore: {},
+        },
+      },
+      xAxis: {},
+      yAxis: {},
+      series: [{
         type: 'line',
         smooth: true,
         // data为坐标
-        data: [[12, 5], [24, 20], [36, 36], [48, 10], [60, 10], [72, 20]]
-    }]
-});
+        data: [[12, 5], [24, 20], [36, 36], [48, 10], [60, 10], [72, 20]],
+      }],
+    });
   }
 
   render() {
@@ -48,7 +48,7 @@ export default class HomePage extends React.PureComponent { // eslint-disable-li
       <h1 className={css.home}>
         Home Page.
         <div><Button type="primary" onClick={this.toSee}>Antd Button</Button></div>
-        <div id="main" style={{width:'600px',height:'400px',margin:'20px auto'}}></div>
+        <div id="main" style={{ width: '600px', height: '400px', margin: '20px auto' }}></div>
       </h1>
     );
   }
