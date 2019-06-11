@@ -19,7 +19,7 @@ class HomePage extends React.Component {
     // 错误边界
     error: null,
     login: false,
-    dataList: Array(200).fill(0).map((d, i) => ({
+    dataList: Array(80).fill(0).map((d, i) => ({
       id: i,
       name: '根管测量仪',
       code: '08105177',
@@ -33,7 +33,7 @@ class HomePage extends React.Component {
   };
 
   componentDidMount() {
-    setTimeout(this.getPdf, 10000);
+    // setTimeout(this.getPdf, 10000);
   }
 
   // eslint-disable-next-line react/sort-comp
